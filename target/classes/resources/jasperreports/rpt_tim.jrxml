@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2017-06-19T13:19:18 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rpt_tim" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="371e5c79-8015-4ad6-90fd-ce59c072f393">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="imeIgraca" class="java.lang.String"/>
+	<field name="prezimeIgraca" class="java.lang.String"/>
+	<field name="datumZaposljavanja" class="java.util.Date"/>
+	<field name="datumRodjenja" class="java.util.Date"/>
+	<field name="brojDresa" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="60" splitType="Stretch">
+			<staticText>
+				<reportElement x="190" y="20" width="200" height="40" uuid="bc74efb5-6166-4be8-bdd2-1410d13c52f0"/>
+				<textElement>
+					<font size="24" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Spisak igraca]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="480" y="0" width="100" height="30" uuid="01213d06-7c50-40a4-87f8-32f7c2439fe8"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="40" width="100" height="30" backcolor="#6132FA" uuid="66b89ed1-9ffe-44f4-aff8-f1b436ecaf29"/>
+				<text><![CDATA[broj dresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="100" y="40" width="100" height="30" backcolor="#6132FA" uuid="ae3035c4-54cc-4f7e-990c-60944e733602"/>
+				<text><![CDATA[ime]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="200" y="40" width="100" height="30" backcolor="#6132FA" uuid="5cf3e697-8f93-4e54-9318-48b338262a19"/>
+				<text><![CDATA[prezime]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="300" y="40" width="100" height="30" backcolor="#6132FA" uuid="c8d9ddc7-4dd2-4749-b312-70a2bd62e5ec"/>
+				<text><![CDATA[datum rodjenja]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="400" y="40" width="100" height="30" backcolor="#6132FA" uuid="a2ce1fe5-3096-4626-b525-77fe15e0fc63"/>
+				<text><![CDATA[datum zaposljavanja]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="0" width="100" height="30" backcolor="#D1D1D1" uuid="bdd5ff42-9cd8-421b-98ab-ede832388c85"/>
+				<textFieldExpression><![CDATA[$F{brojDresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="100" y="0" width="100" height="30" backcolor="#D1D1D1" uuid="2b491933-e302-47da-978e-cb6afa087441"/>
+				<textFieldExpression><![CDATA[$F{imeIgraca}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="200" y="0" width="100" height="30" backcolor="#D1D1D1" uuid="9f13dc42-dcb1-4e98-a2d3-13a4478d07e5"/>
+				<textFieldExpression><![CDATA[$F{prezimeIgraca}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="300" y="0" width="100" height="30" backcolor="#D1D1D1" uuid="94045433-4c3e-4f1a-bfcf-992119eadbf4"/>
+				<textFieldExpression><![CDATA[$F{datumRodjenja}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="400" y="0" width="100" height="30" backcolor="#D1D1D1" uuid="06a2c88a-acd5-4dd4-a00b-14dead0cf97b"/>
+				<textFieldExpression><![CDATA[$F{datumZaposljavanja}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="460" y="24" width="100" height="30" uuid="c885cecf-fa08-4705-b806-390e1a1b78d4"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="47" splitType="Stretch"/>
+	</summary>
+</jasperReport>

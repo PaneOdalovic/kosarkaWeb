@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2017-06-16T22:23:15 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rpt_utakmica" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fecf26a5-8123-4350-b5d8-594243dd92b9">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="PostignutniPoeni" class="java.lang.Integer"/>
+	<parameter name="PrimljeniPoeni" class="java.lang.Integer"/>
+	<parameter name="datumOdrzavanja" class="java.util.Date"/>
+	<parameter name="mesto" class="java.lang.String"/>
+	<parameter name="protivnik" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="igrac.brojDresa" class="java.lang.Integer"/>
+	<field name="igrac.imeIgraca" class="java.lang.String"/>
+	<field name="igrac.prezimeIgraca" class="java.lang.String"/>
+	<field name="brojPoena" class="java.lang.Integer"/>
+	<variable name="utakmica" class="java.lang.String"/>
+	<variable name="UTAKMICA_1" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement positionType="Float" x="100" y="20" width="350" height="50" uuid="8a9125cb-0a21-4ad3-bb23-3fa6463db70d"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="24" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Izvestaj sa utakmice]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="470" y="0" width="100" height="30" uuid="f12197fb-2e90-4443-9405-fc7cf8a4733a"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="64" splitType="Stretch">
+			<textField>
+				<reportElement positionType="Float" x="0" y="0" width="600" height="34" uuid="4949b127-299e-418f-8f75-bb963e87dfb6"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Datum odrzavanja: "+$P{datumOdrzavanja}+",Mesto odrzavanja: "+$P{mesto}+",Protivnik: "+$P{protivnik}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="17" width="470" height="30" uuid="5f8dc3ab-f6fb-4a8e-b3d6-7a1c171cb623"/>
+				<textElement>
+					<font fontName="Serif" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Postignuti poeni: "+$P{PrimljeniPoeni}+",Primljeni poeni: "+$P{PostignutniPoeni}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="68" splitType="Stretch">
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="100" y="38" width="80" height="30" forecolor="#141212" backcolor="#1625F7" uuid="41213963-5ff1-4c41-b2c4-b106a9b7cbe8"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#141212"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#141212"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#141212"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#141212"/>
+				</box>
+				<textElement>
+					<font fontName="Franklin Gothic Book" size="14" isBold="true" isItalic="true"/>
+					<paragraph lineSpacing="Fixed"/>
+				</textElement>
+				<text><![CDATA[imeIgraca]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="180" y="38" width="100" height="30" forecolor="#141212" backcolor="#1625F7" uuid="3a0c3253-3395-4ed4-baf4-4daa589004f5"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#141212"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#141212"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#141212"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#141212"/>
+				</box>
+				<textElement>
+					<font fontName="Franklin Gothic Book" size="14" isBold="true" isItalic="true"/>
+					<paragraph lineSpacing="Fixed"/>
+				</textElement>
+				<text><![CDATA[prezimeIgraca]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="280" y="38" width="100" height="30" forecolor="#141212" backcolor="#1625F7" uuid="b3959de4-55cb-455f-ba5f-0660feda1757"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#141212"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#141212"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#141212"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#141212"/>
+				</box>
+				<textElement>
+					<font fontName="Franklin Gothic Book" size="14" isBold="true" isItalic="true"/>
+					<paragraph lineSpacing="Fixed"/>
+				</textElement>
+				<text><![CDATA[brojDresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="380" y="38" width="100" height="30" forecolor="#141212" backcolor="#1625F7" uuid="da21e1e1-42ea-45e8-a1cf-6219dfa36dce"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#141212"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#141212"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#141212"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#141212"/>
+				</box>
+				<textElement>
+					<font fontName="Franklin Gothic Book" size="14" isBold="true" isItalic="true"/>
+					<paragraph lineSpacing="Fixed"/>
+				</textElement>
+				<text><![CDATA[brojPoena]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="38" width="100" height="30" backcolor="#3209B8" uuid="270f7376-35fc-47de-80d2-8de5f5255f92"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[redni broj]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="100" y="0" width="80" height="30" backcolor="#C4C0C0" uuid="71cfbada-0c37-466d-a54a-6048a7f70cf7"/>
+				<textFieldExpression><![CDATA[$F{igrac.imeIgraca}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="180" y="0" width="100" height="30" backcolor="#C4C0C0" uuid="25db9e5e-a06b-40a9-9483-9f1886b48be9"/>
+				<textFieldExpression><![CDATA[$F{igrac.prezimeIgraca}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="280" y="0" width="100" height="30" backcolor="#C4C0C0" uuid="5d8c80e0-49f6-4402-85b3-2096af9e665c"/>
+				<textFieldExpression><![CDATA[$F{igrac.brojDresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="380" y="0" width="100" height="30" backcolor="#C4C0C0" uuid="acab934f-097a-4594-b2f7-950610ed6f75"/>
+				<textFieldExpression><![CDATA[$F{brojPoena}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="0" y="0" width="100" height="30" backcolor="#C7C3C3" uuid="e27ff34c-b44e-4309-a88f-f0c25b739301"/>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="56" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="62" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="47" splitType="Stretch">
+			<textField>
+				<reportElement x="460" y="17" width="100" height="30" uuid="a392e949-9a2b-4938-aac4-c7d0c05b74af"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
